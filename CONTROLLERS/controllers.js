@@ -55,4 +55,24 @@ const removeTask = async (req, res) => {
     }
 }
 
-module.exports = { createTask, getAllTask, removeTask }
+
+const updateTask =async (req,res)=>{
+  const id=req.params.id ;
+  if(!id){
+     return res.status(400).json({error:"invalid id"})
+  }
+  try{
+    const task= await Task.findByIdAndUpdate(id,{
+      completed:true,
+    },
+  {
+    new:true // helps to return updated task 
+  })
+    res.status(200).json(task)
+    console.log(task)
+  }catch(err){
+    res.status(400).json({error:"some error occured"})
+  }
+}
+
+module.exports = { createTask, getAllTask, removeTask , updateTask}

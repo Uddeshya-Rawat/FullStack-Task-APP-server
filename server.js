@@ -1,6 +1,6 @@
 const express=require('express')
 const mongoose=require('mongoose')
-const {createTask, getAllTask ,removeTask}=require("./CONTROLLERS/controllers")
+const {createTask, getAllTask ,removeTask, updateTask}=require("./CONTROLLERS/controllers")
 const cors=require("cors")
 
 // get mongo url from .env file 
@@ -32,6 +32,9 @@ app.get('/getTask',getAllTask)
 
 // api to post tsk in db
 app.post("/createTask",createTask)
+
+// api for updation
+app.patch("/updateTask/:id",updateTask)
 
 // api to remove the task 
 app.delete("/removeTask/:id",removeTask)
