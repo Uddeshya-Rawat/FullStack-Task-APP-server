@@ -18,12 +18,15 @@ This is the backend server for the **Task Management App**, built using **Node.j
 
 ## 📂 Folder Structure
 
+```bash
 ├── CONTROLLERS/ # Controller functions for APIs
 ├── MODELS/ # Mongoose schema and models
 ├── .env # Environment variables
 ├── package.json
-├── README.md
-└── server.js # server app
+└── README.md
+├── server.js # Main server file
+
+```
 
 ## 📌 Features
 
@@ -44,15 +47,26 @@ This is the backend server for the **Task Management App**, built using **Node.j
 ```bash
 git clone https://github.com/Uddeshya-Rawat/FullStack-Task-APP-server.git   ## clone the file    
 npm install    ## install node modules
+npm install nodemon express cors mongoose dotenv  ## get these dependencies
 cd server     ## change directory to server.js
-npm start  ## start the server or change the scripts accordingly to start server 
+
 ```
+
+### 2. Create a Database and  add cluster URL in .env file
+
 ```bash
   MONGO_URI=<mongodb_url>
 ```
 
+### 3. Start Server
 
-🧪 API Endpoints
+```bash
+   npm start 
+```
+
+
+
+### API ENDPOINTS
 | Method | Endpoint          | Description         |
 | ------ | ----------------- | ------------------- |
 | POST   | `/createTask`     | Create a new task   |
@@ -61,6 +75,8 @@ npm start  ## start the server or change the scripts accordingly to start server
 | PUT    | `/updateTask/:id` | Update task status  |
 
 
+
+### DEPENDENCIES
 ```json
 {
   "dependencies": {
@@ -76,9 +92,10 @@ npm start  ## start the server or change the scripts accordingly to start server
 }
 ```
 
+
 ## 👤 Author
 
-Developed by **Your Name**  
+ 
 📧 Email: [uddeshyarawat4@gmail.com](mailto:uddeshyarawat4@gmail.com)
 
 
