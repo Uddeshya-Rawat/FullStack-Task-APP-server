@@ -45,8 +45,10 @@ This is the backend server for the **Task Management App**, built using **Node.j
 git clone https://github.com/Uddeshya-Rawat/FullStack-Task-APP-server.git   ## clone the file    
 npm install    ## install node modules
 cd server     ## change directory to server.js
-MONGO_URL=mongodb://localhost:27017/your-db-name ## change the MONGOI_URI according to you MongoDB URI in .env file
 npm start  ## start the server or change the scripts accordingly to start server 
+```
+```bash
+  MONGO_URI=<mongodb_url>
 ```
 
 
